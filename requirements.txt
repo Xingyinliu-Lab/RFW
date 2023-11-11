@@ -1,0 +1,5 @@
+taxoniq==0.0.8
+pandas==1.2.4
+numpy==1.20.3
+scipy==1.7.0
+statsmodels==0.13.2
