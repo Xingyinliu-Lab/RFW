@@ -21,7 +21,7 @@ Reference database contains following four files.
 > 3. fundb-KO.db
 > 4. taxonomyInfoDB.db
 
-Download reference database from [figshare](https:/doi.org/10.6084/m9.figshare.24541876) and unzip the files into one filefolder. This will be used as db_place in RFW arguments.
+Download reference database from [figshare](https://doi.org/10.6084/m9.figshare.24541876) and unzip the files into one filefolder. This will be used as db_place in RFW arguments.
  
 
 
