@@ -14,6 +14,19 @@ pip install -r requirements.txt
 
 ### Reference database preparation
 
+Reference database contains following four files.
+
+> 1. fundb-COG.db
+> 2. fundb-EC.db
+> 3. fundb-KO.db
+> 4. taxonomyInfoDB.db
+
+Download reference database from [figshare](https:/doi.org/10.6084/m9.figshare.24541876) and unzip the files into one filefolder. This will be used as db_place in RFW arguments.
+ 
+
+
+
+
 ### Arguments for RFW
 > 1. col_info_name. Metainfo file.
 > 2. abu_df_name. Abundance data file. Both relative abundance or raw counts file are ok.
