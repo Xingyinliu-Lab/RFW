@@ -288,6 +288,3 @@ python DFSCA_BC.py --col_info_name demo_data/col_info_ncbi.csv --rel_abu_df_name
 ```python
 python DFSCA_BC.py --col_info_name demo_data/col_info_ncbi.csv --rel_abu_df_name demo_data/ncbi_res_KO/rel_abu.csv --fun_abu_df_name demo_data/ncbi_res_KO/fun_abu_df_KO_FSCA.csv --prefix kraken_y --output_dir demo_data/ncbi_res_KO/qmd --control_label A --treat_label B --minimum_taxa_abundance_control 0 --minimum_taxa_detection_num 2
 ```
-## License
-
-The RFW software is licensed under the MIT license.
