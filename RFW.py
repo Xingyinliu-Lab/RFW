@@ -193,7 +193,18 @@ if len(mapping_taxa_df)<10:
     sys.exit()
 
 print('Retrieve taxonomy function ...')
-cmdstr='python get_taxon_fun.py '+output_dir+' '+db_place+' '+str(processors)+' '+fun_db_file+' '+anno_type
+
+
+
+script_dir = os.path.dirname(os.path.abspath(__file__))
+get_taxon_fun_path = os.path.join(script_dir, 'get_taxon_fun.py')
+
+if not os.path.exists(get_taxon_fun_path):
+    raise FileNotFoundError(f'Cannot find get_taxon_fun.py at {get_taxon_fun_path}')
+
+cmdstr = f'python "{get_taxon_fun_path}" "{output_dir}" "{db_place}" "{processors}" "{fun_db_file}" "{anno_type}"'
+
+
 #print(cmdstr)
 os.system(cmdstr)
 print('Calculate function abundance...')
@@ -246,7 +257,16 @@ else:
 
 print('Calculate taxon contribution to functions...')
 
-cmdstr='python get_fun_contri.py '+output_dir + '/taxon_fun/'+anno_type+'fun_taxon.csv'+' '+output_dir+' '+output_dir + '/rel_abu.csv'+' '+str(processors)
+get_fun_contri_path = os.path.join(script_dir, 'get_fun_contri.py')
+
+if not os.path.exists(get_fun_contri_path):
+    raise FileNotFoundError(f'Cannot find get_fun_contri.py at {get_fun_contri_path}')
+
+fun_taxon_csv = os.path.join(output_dir, 'taxon_fun', f'{anno_type}fun_taxon.csv')
+rel_abu_csv = os.path.join(output_dir, 'rel_abu.csv')
+
+cmdstr = f'python "{get_fun_contri_path}" "{fun_taxon_csv}" "{output_dir}" "{rel_abu_csv}" "{processors}"'
+
 #print(cmdstr)
 os.system(cmdstr)
 
